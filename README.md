@@ -12,7 +12,7 @@ En este proyecto trabajaremos con datos proporcionados por la diputación de Cá
 * **/src**: Contiene los diferentes módulos de Python que conforman el proyecto.
     * **centros.py**: Contiene funciones para explotar los datos de los centros sanitarios.
     * **centros_test.py**: Contiene funciones de test para probar las funciones del módulo `centros.py`. En este módulo está el main.
-    * **coordenadas.py**: Contiene funciones para trabajar con el tipo Coordenada.
+    * **coordenadas.py**: Contiene funciones para trabajar con el tipo Coordenadas.
     * **coordenadas_test.py**: Contiene funciones de test para probar las funciones del módulo `coordenadas.py`.
     * **mapas.py**: Contiene funciones para crear un mapa y representar puntos en él. Requiere tener instalada la librería folium.
 * **/data**: Contiene el dataset o datasets del proyecto
@@ -40,7 +40,7 @@ Lee las [instrucciones](##Instrucciones) del proyecto que se indican a continuac
 
 * **leer_centros**: recibe la ruta de un fichero CSV codificado en UTF-8, y devuelve una lista de tuplas de tipo ```CentroSanitario(str, str, Coordenadas(float, float), str, int, bool, bool)``` conteniendo todos los datos almacenados en el fichero. 
 * **calcular_total_camas_centros_accesibles**: recibe una lista de tuplas de tipo ```CentroSanitario``` y produce como salida un entero correspondiente al número total de camas de los centros sanitarios accesibles para discapacitados.
-* **obtener_centros_con_uci_cercanos_a**: recibe una lista de tuplas de tipo ```CentroSanitario```; una tupla de tipo ```Coordenadas```, que representa un punto; y un float, que representa un umbral de distancia. Produce como salida una lista de tuplas ```(str, str, Coordenadas(float, float))``` con el nombre, del centro, la localidad y la coordenada de los centros situados a una distancia de la coordenada dada como parámetro menor o igual que el umbral dado. Observe la Figura 3 para entender mejor el resultado de la función.
+* **obtener_centros_con_uci_cercanos_a**: recibe una lista de tuplas de tipo ```CentroSanitario```; una tupla de tipo ```Coordenadas```, que representa un punto; y un float, que representa un umbral de distancia. Produce como salida una lista de tuplas ```(str, str, Coordenadas(float, float))``` con el nombre, del centro, la localidad y las coordenadas de los centros situados a una distancia de las coordenadas dadas como parámetro menor o igual que el umbral dado. Observe la Figura 3 para entender mejor el resultado de la función.
 ![image](https://user-images.githubusercontent.com/72299672/195154929-a0c9fa7b-6f05-4289-b4ee-ea33d011d491.png)
  
 * **generar_mapa**: recibe una lista de tuplas ```(str, str, Coordenadas(float, float))``` con el nombre, del centro, la localidad y las coordenadas del centro; y una cadena, que representa la ruta de un fichero html, que se generará con los centros geolocalizados. 
